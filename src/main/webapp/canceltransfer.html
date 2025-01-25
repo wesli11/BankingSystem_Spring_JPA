@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style>
+table, th, td {
+	border: 1px solid GRAY;
+	border-collapse: collapse;
+}
+a{
+	color:LIGHTSLATEGRAY;
+}
+h1{
+	color:DARKSALMON;
+}
+legend{
+	color:INDIANRED;
+}
+</style>
+<meta charset="ISO-8859-1">
+<title>::Cancel Transfer::</title>
+</head>
+<body>
+<fieldset>
+		<legend>Input ID Transfer</legend><br>
+		<form action="doCancelTransfer" method="post">
+			<label for="idTransferencia">Dni</label>
+			<input type="number" name="idTransferencia">
+			<label for="fecha">Fecha Ini</label>
+			<input type="date" name="fecha1">
+			<input type="submit" value="Anular">
+			<br><br>
+		</form>
+	</fieldset>
+	<p align="right"><a href="FrontController?op=toMenu">Regresar</a></p>
+</body>
+</html>

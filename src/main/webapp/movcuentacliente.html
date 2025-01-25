@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+	<center>
+	<form action="doFindAllMovementsByClient" method="get">     
+         <div>
+         <label>Dni:</label>
+         <input type="number" name="dni" />
+        </div>
+        <div>
+            <button type="submit" value="Ver">Ver</button>
+        </div>
+		
+	</form>
+	
+	      <div th:if="${findAllMovementsByClient}" >
+			  <table border="1" class="table table-striped">
+               		 <thead>
+                       <tr>
+						 <th>Id Movimiento</th>
+						 <th>Id Cuenta</th>
+						 <th>Fecha</th>
+						 <th>Cantidad</th>
+                        </tr>
+					 </thead>
+                
+					 
+                 <tbody th:each="mov: ${findAllMovementsByClient}">
+					<td th:text="${mov.idMovements}"> </td>
+					 <td th:text="${mov.account.idAccount}"> </td>
+					 <td th:text="${mov.dateMovement}"> </td>
+					 <td th:text="${mov.quantity}"> </td>
+                
+                 </tbody>
+ 			  </table>	   
+  </div>
+  </center>
+
+</body>
+</html>
